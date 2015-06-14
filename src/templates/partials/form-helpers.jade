@@ -1,0 +1,43 @@
+//- portfolio 
+//- radio buttons
+mixin inputmenu(inp_items)
+			each inp in inp_items
+				- var cls = {'class': inp.class};
+				- var ids = {'id': inp.id};
+				- var chk = {'checked': inp.checked};
+				input(class='b-portfolio_input', type='radio', name='point')&attributes(cls, ids, chk)
+//- portfolio 
+//- labels radio buttons
+mixin labelmenu(lab_items)
+			each lab in lab_items
+				- var lbl = {'for': lab.for};
+				label(class='b-portfolio_lable')&attributes(lbl)
+
+//- portfolio 
+//- hexagon images
+mixin hexagon(hex_items)
+	each el in hex_items
+		- var cls = {'class': el.class};
+		- var bckg = {'style': el.bground};
+		.b-hex.b-hex_margin-0&attributes(cls, bckg)
+			.b-hex_corner.b-hex_corner_rotate-plus
+			.b-hex_corner.b-hex_corner_rotate-minus
+
+//- portfolio 
+//- slides
+mixin slides(slides_items)
+	each el in slides_items
+		- var sld = el.slide;
+		- var cls = {'class': el.class};
+		.b-portfolio_slides.clr-fix&attributes(cls)
+			+hexagon(sld)
+
+//-	about
+//- social
+mixin link(link_items)
+					each link in link_items
+						- var hrf = {'href': link.href};
+						- var ttl = {'title': link.title};
+						- var src = {'src': link.src};
+						a(class='b-about_link', target='_blank')&attributes(hrf, ttl)
+							img()&attributes(src)

@@ -1,0 +1,20 @@
+include form-helpers
+#about.b-about.bg-color_green
+	.b-wrapper.clr-fix
+		.b-hex.b-about_hex_margin(style='background-image:url(images/photo.png)')
+			.b-hex_corner.b-hex_corner_rotate-plus
+			.b-hex_corner.b-hex_corner_rotate-minus
+		.b-about_content
+			.b-about_aside
+				h2.b-page_h2 Smith Anderson
+				h3.b-page_h3.b-about_h3_color Illustrator &amp; Character Designer
+				p.b-page_p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie fringilla, elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet velit eget venenatis. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna
+			.b-about_social
+				+link([
+					{'href':'https://facebook.com', 'title':'facebook', 'src':'images/facebook.png'},
+					{'href':'https://twitter.com', 'title':'twitter', 'src':'images/twitter.png'},
+					{'href':'https://google.com', 'title':'google', 'src':'images/google.png'},
+					{'href':'https://pinterest.com', 'title':'pinterest', 'src':'images/pinterest.png'},
+					{'href':'https://linkedin.com', 'title':'linkedin', 'src':'images/linkedin.png'},
+					{'href':'https://dribbble.com', 'title':'dribbble', 'src':'images/dribbble.png'}
+					])

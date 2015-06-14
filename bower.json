@@ -1,0 +1,7 @@
+{
+  "name": "test-site-27.05",
+  "version": "0.1.0",
+  "dependencies": {
+    "fontawesome": "~4.3.0"
+  } 
+}

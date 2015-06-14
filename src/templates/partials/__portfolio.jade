@@ -1,0 +1,24 @@
+include form-helpers
+
+#portfolio.b-portfolio
+	.b-wrapper
+		
+		+inputmenu([
+			{ 'class':'b-portfolio_input_active-1', 'id':'slide1', 'checked':'checked'},
+			{ 'class':'b-portfolio_input_active-2', 'id':'slide2'},
+			{ 'class':'b-portfolio_input_active-3', 'id':'slide3'},
+			{ 'class':'b-portfolio_input_active-4', 'id':'slide4'},
+			{ 'class':'b-portfolio_input_active-5', 'id':'slide5'}
+			])
+
+		.b-portfolio_slider
+			include ___slides
+
+		.b-portfolio_controls
+			+labelmenu([
+				{ 'for':'slide1'},
+				{ 'for':'slide2'},
+				{ 'for':'slide3'},
+				{ 'for':'slide4'},
+				{ 'for':'slide5'}
+				])
