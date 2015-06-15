@@ -1,0 +1,18 @@
+include form-helpers
+
+#portfolio.b-prtf-small
+	.b-wrapper
+		.b-portfolio_slider.clr-fix
+			+slidesSmll([
+	{'slide':[{'class':'b-hex_margin-1', 'bground':'background-image:url(images/layer-33.png)'},	
+	{'bground':'background-image:url(images/layer-33.png)'},
+	{'class':'b-hex_margin-2', 'bground':'background-image:url(images/layer-33.png)'},	
+	{'bground':'background-image:url(images/layer-33.png)'},
+	{'bground':'background-image:url(images/layer-33.png)'},
+	{'class':'b-hex_margin-1', 'bground':'background-image:url(images/layer-33.png)'},	
+	{'bground':'background-image:url(images/layer-33.png)'}], 'class':'b-portfolio_slide-1'}
+	])
+		button(class='b-prtf-small_btn b-prtf-small_btn_position_left', type='button')
+			i(class='fa fa-chevron-left')
+		button(class='b-prtf-small_btn b-prtf-small_btn_position_right', type='button')
+			i(class='fa fa-chevron-right')

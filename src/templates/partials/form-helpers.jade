@@ -41,3 +41,11 @@ mixin link(link_items)
 						- var src = {'src': link.src};
 						a(class='b-about_link', target='_blank')&attributes(hrf, ttl)
 							img()&attributes(src)
+
+//- portfolio-small
+//- slides
+mixin slidesSmll(slides_items)
+	each el in slides_items
+		- var sld = el.slide;
+		- var cls = {'class': el.class};		
+			+hexagon(sld)

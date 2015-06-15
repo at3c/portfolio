@@ -14,6 +14,14 @@ var gulpif = require('gulp-if');
 var minifyCss = require('gulp-minify-css');
 var htmlmin = require('gulp-htmlmin');
 
+var install = require("gulp-install");
+gulp.task('install', function(){
+gulp.src(['./bower.json', './package.json'])
+  .pipe(install());
+});
+
+//DEVELOPMENT
+
 //connect local server
 gulp.task('connect', function() {
     connect.server({
@@ -68,6 +76,16 @@ gulp.task('bower', function () {
       directory: "builds/development/bower_components"
     }))
     .pipe(gulp.dest('builds/development'));
+});
+
+//PRODUCTION
+
+//local server for production project
+gulp.task('connect-prod', function() {
+    connect.server({
+      root: 'builds/production',
+      livereload: true
+    });
 });
 
 //copy images to production
